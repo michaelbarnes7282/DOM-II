@@ -20,3 +20,14 @@ links.addEventListener('mouseleave', () => {
     document.body.style.backgroundColor = 'white';
 })
 
+//When dblClick picture, change background color based on mouse x,y position
+var img = document.querySelector('.intro img');
+img.addEventListener('dblclick', (e) => {
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+})
+
+// When copying this h2 to clipboard, change that h2
+var h2 = document.querySelector('.intro h2');
+h2.addEventListener('copy', () =>{
+    h2.textContent = 'Please do not copy me :(';
+})
